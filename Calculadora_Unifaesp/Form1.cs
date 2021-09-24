@@ -31,9 +31,9 @@ namespace Calculadora_Unifaesp
 
         private void btnDois_Click(object sender, EventArgs e)
         {
-            if (visor.Text == "0")
-                visor.Text = "";
-            visor.Text += "2";//Concatenar número 2
+            if (visor.Text == "0")            
+                visor.Text = "";            
+             visor.Text += "2";//Concatenar número 2
         }
 
         private void btnZero_Click(object sender, EventArgs e)
@@ -81,6 +81,23 @@ namespace Calculadora_Unifaesp
                     break;
                     
             }
+        }
+
+        private void btnRaiz_Click(object sender, EventArgs e)
+        {
+            entrada01 = double.Parse(visor.Text);
+            double rQuadrada = Math.Sqrt(entrada01);
+            visor.Text = rQuadrada.ToString();
+            
+        }
+
+        private void btnVirgula_Click(object sender, EventArgs e)
+        {
+            if (visor.Text == "0" )
+                visor.Text += ",";
+            else if(!visor.Text.Contains(","))
+                visor.Text += ",";
+                       
         }
     }
 }
